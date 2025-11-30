@@ -1,1 +1,273 @@
-@import "tailwindcss"
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+
+:root {
+  /* font sizes */
+  --fs-heading-1: 45px;
+  --fs-heading-2: 32px;
+  --fs-heading-3: 28px;
+  --fs-heading-4: 22px;
+  --fs-heading-5: 18px;
+  --fs-heading-6: 16px;
+  --fs-paragraph: 14px;
+  --fs-paragraph-sm: 12px;
+
+  /* font weights */
+  --fw-bold: 700;
+  --fw-semibold: 600;
+  --fw-medium: 500;
+  --fw-regular: 400;
+
+  /* line heights */
+  --lh-heading-1: 52px;
+  --lh-heading-2: 40px;
+  --lh-heading-3: 36px;
+  --lh-heading-4: 28px;
+  --lh-heading-5: 24px;
+  --lh-heading-6: 20px;
+  --lh-paragraph: 18px;
+  --lh-paragraph-sm: 16px;
+
+  /* letter spacing */
+  --ls-025: 0.25px;
+  --ls-0: 0;
+  --ls-015: 0.15px;
+  --ls-05: 0.5px;
+  --ls-04: 0.4px;
+  --ls-01: 0.1px;
+  --ls-n-025: -0.25px;
+
+  --app-bg: #fafafa;
+
+  --surface-bg-primary: #ffffff;
+  --surface-bg-secondary: #f4f4f5;
+  --surface-bg-tertiary: #e4e4e7;
+
+  --text-primary: #000000;
+  --text-secondary: #27272a;
+  --text-tertiary: #71717a;
+
+  --border-primary: #d4d4d8;
+  --border-secondary: #e4e4e7;
+  --border-tertiary: #f4f4f5;
+
+  --sb-ocean-bg-active: #0d6fec;
+  --sb-ocean-bg-hover: #1486fc;
+  --sb-ocean-bg-on-press: #1157bc;
+  --sb-ocean-bg-disabled: #d8f1ff;
+
+  --sb-ocean-content-primary: #eef9ff;
+  --sb-ocean-content-secondary: #53c3ff;
+
+  --sb-sunglow-bg-active: #ffc833;
+  --sb-sunglow-bg-hover: #ffd74a;
+  --sb-sunglow-bg-on-press: #f9a107;
+  --sb-sunglow-bg-disabled: #fff5c6;
+
+  --sb-sunglow-content-primary: #000000;
+  --sb-sunglow-content-secondary: #ffd74a;
+
+  --sb-sakura-bg-active: #fc6aa1;
+  --sb-sakura-bg-hover: #fea7ca;
+  --sb-sakura-bg-on-press: #f63e7f;
+  --sb-sakura-bg-disabled: #fde6f0;
+
+  --sb-sakura-content-primary: #ffffff;
+  --sb-sakura-content-secondary: #fea7ca;
+
+  /* SB Amethyst Theme */
+  --sb-amethyst-bg-active: #8b5cf6;
+  --sb-amethyst-bg-hover: #a78bfa;
+  --sb-amethyst-bg-on-press: #6d28d9;
+  --sb-amethyst-bg-disabled: #ede9fe;
+
+  --sb-amethyst-content-primary: #ffffff;
+  --sb-amethyst-content-secondary: #a78bfa;
+
+  --sb-pumpkin-bg-active: #f07225;
+  --sb-pumpkin-bg-hover: #f38e44;
+  --sb-pumpkin-bg-on-press: #e15515;
+  --sb-pumpkin-bg-disabled: #fdecd7;
+
+  --sb-pumpkin-content-primary: #ffffff;
+  --sb-pumpkin-content-secondary: #f7b67a;
+
+  --sb-valencia-bg-active: #ec5447;
+  --sb-valencia-bg-hover: #f57e74;
+  --sb-valencia-bg-on-press: #db4437;
+  --sb-valencia-bg-disabled: #fde5e3;
+
+  --sb-valencia-content-primary: #ffffff;
+  --sb-valencia-content-secondary: #faaeaa;
+
+  --sb-green-haze-bg-active: #1bcc76;
+  --sb-green-haze-bg-hover: #44e495;
+  --sb-green-haze-bg-on-press: #0f9d58;
+  --sb-green-haze-bg-disabled: #dbfdec;
+
+  --sb-green-haze-content-primary: #ffffff;
+  --sb-green-haze-content-secondary: #82f3bb;
+
+  --sb-neutral-bg-active: #09090b;
+  --sb-neutral-bg-hover: #27272a;
+  --sb-neutral-bg-on-press: #18181b;
+  --sb-neutral-bg-disabled: #d4d4d8;
+
+  --sb-neutral-content-primary: #ffffff;
+  --sb-neutral-content-secondary: #a1a1aa;
+
+  --skeleton-bg: rgb(0, 0, 0, 0.1);
+  --shadow: rgba(0, 0, 0, 0.16);
+}
+
+/* Mobile Headers */
+@media only screen and (max-width: 480px) {
+  :root {
+    /* font sizes */
+    --fs-heading-1: 32px;
+    --fs-heading-2: 28px;
+    --fs-heading-3: 22px;
+    --fs-heading-4: 20px;
+    --fs-heading-5: 18px;
+    --fs-heading-6: 16px;
+    --fs-paragraph: 14px;
+    --fs-paragraph-sm: 12px;
+
+    /* line heights */
+    --lh-heading-1: 40px;
+    --lh-heading-2: 36px;
+    --lh-heading-3: 28px;
+    --lh-heading-4: 24px;
+    --lh-heading-5: 22px;
+    --lh-heading-6: 20px;
+    --lh-paragraph: 16px;
+    --lh-paragraph-sm: 14px;
+  }
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  font-size: 16px;
+  background: var(--app-bg);
+  color: var(--text-primary);
+  transition: color 300ms ease, background-color 300ms ease;
+}
+
+body.dark-mode {
+  --app-bg: #000000;
+
+  --surface-bg-primary: #0d0d0d;
+  --surface-bg-secondary: #18181b;
+  --surface-bg-tertiary: #27272a;
+
+  --text-primary: #ffffff;
+  --text-secondary: #d4d4d8;
+  --text-tertiary: #a1a1aa;
+
+  --border-primary: #3f3f46;
+  --border-secondary: #27272a;
+  --border-tertiary: #18181b;
+
+  --sb-ocean-bg-disabled: #122f59;
+  --sb-ocean-content-secondary: #1157bc;
+
+  --sb-sunglow-bg-disabled: #461b02;
+  --sb-sunglow-content-secondary: #94400c;
+
+  --sb-sakura-bg-disabled: #540318;
+  --sb-sakura-content-secondary: #a50f36;
+
+  --sb-pumpkin-bg-disabled: #411309;
+  --sb-pumpkin-content-secondary: #943318;
+
+  --sb-valencia-bg-disabled: #44100b;
+  --sb-valencia-content-secondary: #97271d;
+
+  --sb-green-haze-bg-disabled: #03301d;
+  --sb-green-haze-content-secondary: #13683f;
+
+  --sb-amethyst-bg-disabled: #2d1b69;
+  --sb-amethyst-content-secondary: #6d28d9;
+
+  --sb-neutral-bg-active: #fafafa;
+  --sb-neutral-bg-hover: #e4e4e7;
+  --sb-neutral-bg-on-press: #d4d4d8;
+  --sb-neutral-bg-disabled: #09090b;
+  --sb-neutral-content-primary: #000000;
+  --sb-neutral-content-secondary: #27272a;
+
+  --skeleton-bg: rgba(255, 255, 255, 0.1);
+  --shadow: rgba(255, 255, 255, 0.16);
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+h1 {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-heading-1);
+  line-height: var(--lh-heading-1);
+  letter-spacing: var(--ls-025);
+}
+
+h2 {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-heading-2);
+  line-height: var(--lh-heading-2);
+  letter-spacing: var(--ls-0);
+}
+
+h3 {
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-heading-3);
+  line-height: var(--lh-heading-3);
+  letter-spacing: var(--ls-0);
+}
+
+h4 {
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-heading-4);
+  line-height: var(--lh-heading-4);
+  letter-spacing: var(--ls-0);
+}
+
+h5 {
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-heading-5);
+  line-height: var(--lh-heading-5);
+  letter-spacing: var(--ls-0);
+}
+
+h6 {
+  font-weight: var(--fw-medium);
+  font-size: var(--fs-heading-6);
+  line-height: var(--lh-heading-6);
+  letter-spacing: var(--ls-015);
+}
+
+p,
+a,
+th,
+td,
+button,
+label,
+select {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-paragraph);
+  line-height: var(--lh-paragraph);
+  letter-spacing: var(--ls-025);
+}
+
+span {
+  font-weight: var(--fw-regular);
+  font-size: var(--fs-paragraph-sm);
+  line-height: var(--lh-paragraph-sm);
+  letter-spacing: var(--ls-05);
+}
