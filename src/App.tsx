@@ -1,8 +1,6 @@
 import { useEffect } from "react";
-import { Route, Routes } from "react-router";
-
-// Pages
-import Homepage from "./globals/pages/Homepage";
+import Router from "./router/Router";
+import GlobalToast from "./globals/components/GlobalToast";
 
 function App() {
   useEffect(() => {
@@ -10,11 +8,10 @@ function App() {
   }, []);
 
   return (
-    <Routes>
-      <Route index element={<Homepage />} />
-      <Route path="/" element={<Homepage />} />
-      <Route />
-    </Routes>
+    <>
+      <Router />
+      <GlobalToast />
+    </>
   );
 }
 

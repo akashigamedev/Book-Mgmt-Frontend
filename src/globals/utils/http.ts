@@ -14,12 +14,14 @@ export const makeRequest = async (
   url: string,
   data: unknown | undefined | null = null,
   options: IHTTPOptions = {
-    headers: {},
+    headers: {
+      'Content-Type': 'application/json'
+    },
     params: {},
     credentials: "omit",
-  },
+  }
 ) => {
-  url = import.meta.env.VITE_API_BASE_URL + url;
+  url = import.meta.env.VITE_API_BASE_URL + '/api' + url;
 
   const queryParams = new URLSearchParams();
   for (const [key, value] of Object.entries(options?.params ?? {})) {
@@ -41,5 +43,10 @@ export const makeRequest = async (
   }
   const res = await fetch(url, fetchOptions);
 
-  return (await res.json()) ?? null;
+  const json = (await res.json()) ?? null;
+
+  return {
+    status: res.status,
+    json: json,
+  };
 };

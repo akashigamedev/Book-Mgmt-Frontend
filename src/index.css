@@ -271,3 +271,8 @@ span {
   line-height: var(--lh-paragraph-sm);
   letter-spacing: var(--ls-05);
 }
+
+
+.debug {
+  border: 1px solid red;
+}
