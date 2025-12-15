@@ -19,7 +19,7 @@ const LoginPage = () => {
       <div className="w-[40%] flex justify-center items-center bg-(--surface-bg-primary)">
         <div>
           <div className="flex flex-col items-center text-center">
-            <h1>Admin Panel Login</h1>
+            <h2>Book Management System</h2>
             <h6 className="text-(--text-secondary)">
               Secure access to book inventory and system controls
             </h6>

@@ -1,3 +1,4 @@
+
 // interfaces
 type IHTTPMethod = "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
 interface IHTTPOptions {
@@ -15,13 +16,13 @@ export const makeRequest = async (
   data: unknown | undefined | null = null,
   options: IHTTPOptions = {
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json",
     },
     params: {},
-    credentials: "omit",
+    credentials: "include",
   }
 ) => {
-  url = import.meta.env.VITE_API_BASE_URL + '/api' + url;
+  url = import.meta.env.VITE_API_BASE_URL + "/api" + url;
 
   const queryParams = new URLSearchParams();
   for (const [key, value] of Object.entries(options?.params ?? {})) {
